@@ -15,4 +15,8 @@ public class Mile {
     public int hashCode() {
         return this.amount;
     }
+
+    public Mile add(Mile other) {
+        return null;
+    }
 }
