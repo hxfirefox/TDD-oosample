@@ -1,13 +1,13 @@
-public class Yard {
+public class Feet {
     private final int amount;
 
-    public Yard(int amount) {
+    public Feet(int amount) {
         this.amount = amount;
     }
 
     @Override
     public boolean equals(Object o) {
-        Yard other = (Yard) o;
+        Feet other = (Feet) o;
         return this.amount == other.amount;
     }
 
@@ -16,11 +16,7 @@ public class Yard {
         return this.amount;
     }
 
-    public Yard add(Yard other) {
-        return new Yard(this.amount + other.amount);
-    }
-
-    public Feet toFeet() {
-        return new Feet(this.amount * 3);
+    public Feet add(Feet other) {
+        return new Feet(this.amount + other.amount);
     }
 }

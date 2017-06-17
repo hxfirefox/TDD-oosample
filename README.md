@@ -30,3 +30,13 @@
    3 Yard = 1 Yard + 2 Yard
    1762 Yard = 1 Mile + 2 Yard
   ```
+
+### 需求描述4
+用户可以可以使用Feet为单位的长度不仅可以进行比较是否相等，还可以进行相加
+
+- 当以Feet为单位来表示一个长度时,精度为1 Feet，能够将两个长度相加，例如：
+  ```
+   3 Feet == 3 Feet
+   5 Feet = 1 Feet + 4 Feet
+   1 Yard == 3 Feet
+  ```
