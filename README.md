@@ -14,3 +14,19 @@
   ```
    5 Mile = 1 Mile + 4 Mile
   ```
+
+### 需求描述3
+用户除了可以使用Mile为单位来表示长度之外，还可以使用Yard为单位来表示长度，其中:
+
+- 当以Mile为单位来表示一个长度时,精度为1 Mile
+- 当以Yard为单位来表示一个长度时,精度为1 Yard
+- 能够对比任意两个长度的相等性
+- 能够将任意的长度进行相加
+  ```
+   1 Mile == 1760 Yard
+   3 Yard == 3 Yard
+   1 Mile != 1761 Yard
+   3 Yard != 4 Yard
+   3 Yard = 1 Yard + 2 Yard
+   1762 Yard = 1 Mile + 2 Yard
+  ```
