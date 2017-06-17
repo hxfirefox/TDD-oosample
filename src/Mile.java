@@ -21,6 +21,6 @@ public class Mile extends Length{
     }
 
     public Yard toYard() {
-        return new Yard(this.amount * 1760);
+        return new Yard(this.amount * Length.MILE_RATE / Length.YARD_RATE);
     }
 }

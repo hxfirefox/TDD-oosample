@@ -21,6 +21,6 @@ public class Feet extends Length{
     }
 
     public Inch toInch() {
-        return new Inch(this.amount * 12);
+        return new Inch(this.amount * FEET_RATE / Length.INCH_RATE);
     }
 }

@@ -21,6 +21,6 @@ public class Yard extends Length{
     }
 
     public Feet toFeet() {
-        return new Feet(this.amount * 3);
+        return new Feet(this.amount * YARD_RATE / Length.FEET_RATE);
     }
 }
