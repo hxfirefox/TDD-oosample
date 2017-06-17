@@ -17,6 +17,6 @@ public class Mile {
     }
 
     public Mile add(Mile other) {
-        return null;
+        return new Mile(this.amount + other.amount);
     }
 }
