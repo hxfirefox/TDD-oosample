@@ -17,4 +17,24 @@ public class FeetTest {
         // then
         assertEquals(new Feet(5), new Feet(1).add(new Feet(4)));
     }
+
+    @Test
+    public void should_feet1_equals_inch12() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals(new Feet(1).toInch(), new Inch(12));
+    }
+
+    @Test
+    public void should_inch15_equals_feet1_plus_inch3() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals(new Inch(15), new Feet(1).toInch().add(new Inch(3)));
+    }
 }

@@ -1,13 +1,13 @@
-public class Feet {
+public class Inch {
     private final int amount;
 
-    public Feet(int amount) {
+    public Inch(int amount) {
         this.amount = amount;
     }
 
     @Override
     public boolean equals(Object o) {
-        Feet other = (Feet) o;
+        Inch other = (Inch) o;
         return this.amount == other.amount;
     }
 
@@ -16,11 +16,7 @@ public class Feet {
         return this.amount;
     }
 
-    public Feet add(Feet other) {
-        return new Feet(this.amount + other.amount);
-    }
-
-    public Inch toInch() {
-        return new Inch(this.amount * 12);
+    public Inch add(Inch other) {
+        return new Inch(this.amount + other.amount);
     }
 }
