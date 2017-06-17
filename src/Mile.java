@@ -21,6 +21,6 @@ public class Mile {
     }
 
     public Yard toYard() {
-        return null;
+        return new Yard(this.amount * 1760);
     }
 }
