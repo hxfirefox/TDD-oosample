@@ -19,4 +19,8 @@ public class Mile {
     public Mile add(Mile other) {
         return new Mile(this.amount + other.amount);
     }
+
+    public Yard toYard() {
+        return null;
+    }
 }

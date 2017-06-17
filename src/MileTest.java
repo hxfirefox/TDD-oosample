@@ -28,4 +28,14 @@ public class MileTest {
         // then
         assertEquals(new Mile(5), new Mile(1).add(new Mile(4)));
     }
+
+    @Test
+    public void should_yard1760_equals_mile1() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals(new Yard(1760), new Mile(1).toYard());
+    }
 }
