@@ -17,6 +17,6 @@ public class Yard {
     }
 
     public Yard add(Yard other) {
-        return null;
+        return new Yard(this.amount + other.amount);
     }
 }
