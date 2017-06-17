@@ -18,4 +18,14 @@ public class YardTest {
         // then
         assertNotEquals(new Yard(3), new Yard(4));
     }
+
+    @Test
+    public void should_yard3_equals_yard1_plus_yard2() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals(new Yard(3), new Yard(1).add(new Yard(2)));
+    }
 }

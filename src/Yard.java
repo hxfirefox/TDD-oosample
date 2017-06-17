@@ -15,4 +15,8 @@ public class Yard {
     public int hashCode() {
         return this.amount;
     }
+
+    public Yard add(Yard other) {
+        return null;
+    }
 }
