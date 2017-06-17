@@ -48,4 +48,14 @@ public class MileTest {
         // then
         assertNotEquals(new Yard(1761), new Mile(1).toYard());
     }
+
+    @Test
+    public void should_yard1762_equals_mile1_plus_yard2() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals(new Yard(1762), new Mile(1).toYard().add(new Yard(2)));
+    }
 }
