@@ -1,4 +1,4 @@
-public class Mile {
+public class Mile extends Length{
     private final int amount;
 
     public Mile(int amount) {

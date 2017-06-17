@@ -1,4 +1,4 @@
-public class Yard {
+public class Yard extends Length{
     private final int amount;
 
     public Yard(int amount) {

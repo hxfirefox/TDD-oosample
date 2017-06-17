@@ -1,4 +1,4 @@
-public class Feet {
+public class Feet extends Length{
     private final int amount;
 
     public Feet(int amount) {

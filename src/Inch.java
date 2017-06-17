@@ -1,4 +1,4 @@
-public class Inch {
+public class Inch extends Length{
     private final int amount;
 
     public Inch(int amount) {
