@@ -6,7 +6,7 @@ public class Inch extends Length{
         this.amount = amount;
     }
 
-    public Inch add(Inch other) {
-        return new Inch(this.amount + other.amount);
-    }
+//    public Inch add(Inch other) {
+//        return new Inch(this.amount + other.amount);
+//    }
 }

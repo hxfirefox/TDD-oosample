@@ -23,4 +23,17 @@ public class LengthTest {
         assertEquals(new Yard(1), new Feet(3));
         assertEquals(new Feet(1), new Inch(12));
     }
+
+    @Test
+    public void should_add_with_same_unit() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals(new Mile(5), new Mile(1).add(new Mile(4)));
+        assertEquals(new Yard(5), new Yard(1).add(new Yard(4)));
+        assertEquals(new Feet(5), new Feet(1).add(new Feet(4)));
+        assertEquals(new Inch(5), new Inch(1).add(new Inch(4)));
+    }
 }

@@ -20,16 +20,6 @@ public class MileTest {
     }
 
     @Test
-    public void should_mile5_equals_mile1_plus_mile4() throws Exception {
-        // given
-
-        // when
-
-        // then
-        assertEquals(new Mile(5), new Mile(1).add(new Mile(4)));
-    }
-
-    @Test
     public void should_yard1762_equals_mile1_plus_yard2() throws Exception {
         // given
 

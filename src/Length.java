@@ -17,4 +17,13 @@ public class Length {
         Length other = (Length) o;
         return amount * rateOfBase == other.amount * other.rateOfBase;
     }
+
+    @Override
+    public int hashCode() {
+        return amount;
+    }
+
+    public Length add(Length other) {
+        return new Length(amount * rateOfBase + other.amount * other.rateOfBase, BASE_RATE);
+    }
 }
