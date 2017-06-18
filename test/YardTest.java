@@ -28,14 +28,4 @@ public class YardTest {
         // then
         assertEquals(new Yard(3), new Yard(1).add(new Yard(2)));
     }
-
-    @Test
-    public void should_yard1_equals_feet3() throws Exception {
-        // given
-
-        // when
-
-        // then
-        assertEquals(new Yard(1).toFeet(), new Feet(3));
-    }
 }
