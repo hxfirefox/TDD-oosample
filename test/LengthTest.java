@@ -10,4 +10,17 @@ public class LengthTest {
         assertEquals(new Feet(3), new Length(3, Length.FEET_RATE));
         assertEquals(new Inch(3), new Length(3, Length.INCH_RATE));
     }
+
+    @Test
+    public void should_compare_between_different_unit() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals(new Yard(1760), new Mile(1));
+        assertNotEquals(new Yard(1761), new Mile(1));
+        assertEquals(new Yard(1), new Feet(3));
+        assertEquals(new Feet(1), new Inch(12));
+    }
 }
