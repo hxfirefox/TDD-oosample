@@ -12,6 +12,19 @@ public class LengthTest {
     }
 
     @Test
+    public void should_compare_between_same_unit() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals(new Mile(3), new Mile(3));
+        assertNotEquals(new Yard(3), new Yard(3));
+        assertEquals(new Feet(3), new Feet(3));
+        assertEquals(new Inch(3), new Inch(3));
+    }
+
+    @Test
     public void should_compare_between_different_unit() throws Exception {
         // given
 
@@ -35,5 +48,16 @@ public class LengthTest {
         assertEquals(new Yard(5), new Yard(1).add(new Yard(4)));
         assertEquals(new Feet(5), new Feet(1).add(new Feet(4)));
         assertEquals(new Inch(5), new Inch(1).add(new Inch(4)));
+    }
+
+    @Test
+    public void should_add_with_different_unit() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals(new Yard(1762), new Mile(1).add(new Yard(2)));
+        assertEquals(new Inch(15), new Feet(1).add(new Inch(3)));
     }
 }
