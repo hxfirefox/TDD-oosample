@@ -11,4 +11,10 @@ public class Length {
         this.amount = amount;
         this.rateOfBase = rateOfBase;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        Length other = (Length) o;
+        return amount * rateOfBase == other.amount * other.rateOfBase;
+    }
 }
