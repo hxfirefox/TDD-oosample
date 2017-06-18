@@ -4,4 +4,11 @@ public class Length {
     static final int FEET_RATE = 12 * INCH_RATE;
     static final int YARD_RATE = 3 * FEET_RATE;
     static final int MILE_RATE = 1760 * YARD_RATE;
+    private final int amount;
+    private final int rateOfBase;
+
+    public Length(int amount, int rateOfBase) {
+        this.amount = amount;
+        this.rateOfBase = rateOfBase;
+    }
 }

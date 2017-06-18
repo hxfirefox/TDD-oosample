@@ -2,6 +2,7 @@ public class Yard extends Length{
     private final int amount;
 
     public Yard(int amount) {
+        super(amount, YARD_RATE);
         this.amount = amount;
     }
 
