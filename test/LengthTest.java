@@ -6,9 +6,9 @@ public class LengthTest {
     @Test
     public void should_equals_length_with_corresponding_amount_and_rate() throws Exception {
         assertEquals(Length.mile(3), new Length(3, Length.MILE_RATE));
-        assertEquals(new Yard(3), new Length(3, Length.YARD_RATE));
-        assertEquals(new Feet(3), new Length(3, Length.FEET_RATE));
-        assertEquals(new Inch(3), new Length(3, Length.INCH_RATE));
+        assertEquals(Length.yard(3), new Length(3, Length.YARD_RATE));
+        assertEquals(Length.feet(3), new Length(3, Length.FEET_RATE));
+        assertEquals(Length.inch(3), new Length(3, Length.INCH_RATE));
     }
 
     @Test
@@ -19,9 +19,9 @@ public class LengthTest {
 
         // then
         assertEquals(Length.mile(3), Length.mile(3));
-        assertNotEquals(new Yard(3), new Yard(3));
-        assertEquals(new Feet(3), new Feet(3));
-        assertEquals(new Inch(3), new Inch(3));
+        assertNotEquals(Length.yard(3), Length.yard(3));
+        assertEquals(Length.feet(3), Length.feet(3));
+        assertEquals(Length.inch(3), Length.inch(3));
     }
 
     @Test
@@ -31,10 +31,10 @@ public class LengthTest {
         // when
 
         // then
-        assertEquals(new Yard(1760), Length.mile(1));
-        assertNotEquals(new Yard(1761), Length.mile(1));
-        assertEquals(new Yard(1), new Feet(3));
-        assertEquals(new Feet(1), new Inch(12));
+        assertEquals(Length.yard(1760), Length.mile(1));
+        assertNotEquals(Length.yard(1761), Length.mile(1));
+        assertEquals(Length.yard(1), Length.feet(3));
+        assertEquals(Length.feet(1), Length.inch(12));
     }
 
     @Test
@@ -45,9 +45,9 @@ public class LengthTest {
 
         // then
         assertEquals(Length.mile(5), Length.mile(1).add(Length.mile(4)));
-        assertEquals(new Yard(5), new Yard(1).add(new Yard(4)));
-        assertEquals(new Feet(5), new Feet(1).add(new Feet(4)));
-        assertEquals(new Inch(5), new Inch(1).add(new Inch(4)));
+        assertEquals(Length.yard(5), Length.yard(1).add(Length.yard(4)));
+        assertEquals(Length.feet(5), Length.feet(1).add(Length.feet(4)));
+        assertEquals(Length.inch(5), Length.inch(1).add(Length.inch(4)));
     }
 
     @Test
@@ -57,7 +57,7 @@ public class LengthTest {
         // when
 
         // then
-        assertEquals(new Yard(1762), Length.mile(1).add(new Yard(2)));
-        assertEquals(new Inch(15), new Feet(1).add(new Inch(3)));
+        assertEquals(Length.yard(1762), Length.mile(1).add(Length.yard(2)));
+        assertEquals(Length.inch(15), Length.feet(1).add(Length.inch(3)));
     }
 }

@@ -16,6 +16,18 @@ public class Length {
         return new Length(amount, Length.MILE_RATE);
     }
 
+    public static Length feet(int amount) {
+        return new Length(amount, Length.FEET_RATE);
+    }
+
+    public static Length inch(int amount) {
+        return new Length(amount, Length.INCH_RATE);
+    }
+
+    public static Length yard(int amount) {
+        return new Length(amount, Length.YARD_RATE);
+    }
+
     @Override
     public boolean equals(Object o) {
         Length other = (Length) o;
