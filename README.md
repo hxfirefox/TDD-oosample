@@ -51,3 +51,6 @@
    1 Feet == 12 Inch
    15 Inch = 1 Feet + 3 Inch
   ```
+
+### 需求描述6
+用户只能使用上述几种长度单位(Mile、Yard、Feet、Inch)，而不应创建新的单位，避免产生奇怪而不存在的单位

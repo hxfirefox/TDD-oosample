@@ -7,7 +7,7 @@ public class Length {
     private final int amount;
     private final int rateOfBase;
 
-    public Length(int amount, int rateOfBase) {
+    private Length(int amount, int rateOfBase) {
         this.amount = amount;
         this.rateOfBase = rateOfBase;
     }
