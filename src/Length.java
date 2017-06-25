@@ -26,7 +26,7 @@ public class Length {
     @Override
     public boolean equals(Object o) {
         Length other = (Length) o;
-        return amount * unit.getRateOfBase() == other.amount * other.unit.getRateOfBase();
+        return toBaseAmount() == other.toBaseAmount();
     }
 
     @Override
@@ -35,7 +35,10 @@ public class Length {
     }
 
     public Length add(Length other) {
-        return new Length(amount * unit.getRateOfBase() + other.amount * other.unit.getRateOfBase(),
-                LengthUnit.BASE);
+        return new Length(toBaseAmount() + other.toBaseAmount(), LengthUnit.BASE);
+    }
+
+    private int toBaseAmount() {
+        return amount * unit.getRateOfBase();
     }
 }
