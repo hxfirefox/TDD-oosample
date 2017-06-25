@@ -12,6 +12,10 @@ public class Length {
         this.rateOfBase = rateOfBase;
     }
 
+    public static Length mile(int amount) {
+        return new Length(amount, Length.MILE_RATE);
+    }
+
     @Override
     public boolean equals(Object o) {
         Length other = (Length) o;
