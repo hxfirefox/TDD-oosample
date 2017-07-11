@@ -41,4 +41,9 @@ public class Length {
     private int toBaseAmount() {
         return amount * unit.getRateOfBase();
     }
+
+    @Override
+    public String toString() {
+        return "0 Inch";
+    }
 }
