@@ -61,6 +61,7 @@ public class LengthTest {
         // then
         assertEquals("0 Inch", Length.inch(0).toString());
         assertEquals("0 Inch", Length.mile(0).toString());
+        assertEquals("1 Inch", Length.inch(1).toString());
     }
 
     @Test
@@ -81,5 +82,25 @@ public class LengthTest {
 
         // then
         assertEquals("2 Feet", Length.inch(24).toString());
+    }
+
+    @Test
+    public void should_print_1_yard_3_inch_when_39_inch() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals("1 Yard 3 Inch", Length.inch(39).toString());
+    }
+
+    @Test
+    public void should_print_1_mile_2_yard_when_1762_yard() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals("1 Mile 2 Yard", Length.yard(1762).toString());
     }
 }
