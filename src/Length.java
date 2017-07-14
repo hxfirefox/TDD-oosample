@@ -44,6 +44,15 @@ public class Length {
 
     @Override
     public String toString() {
-        return "0 Inch";
+        if (amount == 0) {
+            return "0 Inch";
+        }
+
+        int v1 = amount * unit.getRateOfBase() / LengthUnit.FEET.getRateOfBase();
+        int v2 = amount * unit.getRateOfBase() % LengthUnit.FEET.getRateOfBase();
+        if (v2 == 0) {
+            return v1 + " Feet";
+        }
+        return v1 + " Feet " + v2 + " Inch";
     }
 }

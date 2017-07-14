@@ -11,7 +11,7 @@ public class LengthTest {
 
         // then
         assertEquals(Length.mile(3), Length.mile(3));
-        assertNotEquals(Length.yard(3), Length.yard(3));
+        assertEquals(Length.yard(3), Length.yard(3));
         assertEquals(Length.feet(3), Length.feet(3));
         assertEquals(Length.inch(3), Length.inch(3));
     }
@@ -71,5 +71,15 @@ public class LengthTest {
 
         // then
         assertEquals("1 Feet 2 Inch", Length.inch(14).toString());
+    }
+
+    @Test
+    public void should_print_2_feet_when_24_inch() throws Exception {
+        // given
+
+        // when
+
+        // then
+        assertEquals("2 Feet", Length.inch(24).toString());
     }
 }
