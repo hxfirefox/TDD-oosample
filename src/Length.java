@@ -50,20 +50,23 @@ public class Length {
             return "0 Inch";
         }
 
-        int mileV = amount * unit.getRateOfBase() / LengthUnit.MILE.getRateOfBase();
+        int temp = toBaseAmount();
+        int mileV = temp / LengthUnit.MILE.getRateOfBase();
         if (mileV != 0) {
-            out.append(mileV).append(" ").append("Mile");
-            startFlag = true;
+            out.append(startFlag ? " " : "").append(mileV).append(" ").append("Mile");
+            if (!startFlag) {
+                startFlag = true;
+            }
         }
-        int mileV1 = amount * unit.getRateOfBase() % LengthUnit.MILE.getRateOfBase();
-        int yardV = mileV1 / LengthUnit.YARD.getRateOfBase();
+        int yardV1 = temp % LengthUnit.MILE.getRateOfBase();
+        int yardV = yardV1 / LengthUnit.YARD.getRateOfBase();
         if (yardV != 0) {
             out.append(startFlag ? " " : "").append(yardV).append(" ").append("Yard");
             if (!startFlag) {
                 startFlag = true;
             }
         }
-        int feetV1 = amount * unit.getRateOfBase() % LengthUnit.YARD.getRateOfBase();
+        int feetV1 = yardV1 % LengthUnit.YARD.getRateOfBase();
         if (feetV1 == 0) {
             return out.toString();
         }
