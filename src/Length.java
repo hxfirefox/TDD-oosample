@@ -51,37 +51,20 @@ public class Length {
         }
 
         int temp = toBaseAmount();
-        int mileV = temp / LengthUnit.MILE.getRateOfBase();
-        if (mileV != 0) {
-            out.append(startFlag ? " " : "").append(mileV).append(" ").append("Mile");
-            if (!startFlag) {
-                startFlag = true;
+        LengthUnit[] units = LengthUnit.values();
+        for (int i = 4; i > 0; i--) {
+            int v = temp / units[i].getRateOfBase();
+            if (v != 0) {
+                out.append(startFlag ? " " : "").append(v).append(" ").append(units[i].toString());
+                if (!startFlag) {
+                    startFlag = true;
+                }
+            }
+            temp = temp % units[i].getRateOfBase();
+            if (temp == 0) {
+                return out.toString();
             }
         }
-        int yardV1 = temp % LengthUnit.MILE.getRateOfBase();
-        int yardV = yardV1 / LengthUnit.YARD.getRateOfBase();
-        if (yardV != 0) {
-            out.append(startFlag ? " " : "").append(yardV).append(" ").append("Yard");
-            if (!startFlag) {
-                startFlag = true;
-            }
-        }
-        int feetV1 = yardV1 % LengthUnit.YARD.getRateOfBase();
-        if (feetV1 == 0) {
-            return out.toString();
-        }
-        int feetV = feetV1 / LengthUnit.FEET.getRateOfBase();
-        if (feetV != 0) {
-            out.append(startFlag ? " " : "").append(feetV).append(" ").append("Feet");
-            if (!startFlag) {
-                startFlag = true;
-            }
-        }
-        int inchV = feetV1 % LengthUnit.FEET.getRateOfBase();
-        if (inchV == 0) {
-            return out.toString();
-        }
-        out.append(startFlag ? " " : "").append(inchV).append(" ").append("Inch");
         return out.toString();
     }
 }
