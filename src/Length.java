@@ -1,5 +1,6 @@
 public class Length {
     private final int amount;
+
     private final LengthUnit unit;
 
     private Length(int amount, LengthUnit unit) {
@@ -38,33 +39,16 @@ public class Length {
         return new Length(toBaseAmount() + other.toBaseAmount(), LengthUnit.BASE);
     }
 
-    private int toBaseAmount() {
+    public int getAmount() {
+        return amount;
+    }
+
+    public int toBaseAmount() {
         return amount * unit.getRateOfBase();
     }
 
     @Override
     public String toString() {
-        boolean startFlag = false;
-        StringBuilder out = new StringBuilder();
-        if (amount == 0) {
-            return "0 Inch";
-        }
-
-        int temp = toBaseAmount();
-        LengthUnit[] units = LengthUnit.values();
-        for (int i = 4; i > 0; i--) {
-            int v = temp / units[i].getRateOfBase();
-            if (v != 0) {
-                out.append(startFlag ? " " : "").append(v).append(" ").append(units[i].toString());
-                if (!startFlag) {
-                    startFlag = true;
-                }
-            }
-            temp = temp % units[i].getRateOfBase();
-            if (temp == 0) {
-                return out.toString();
-            }
-        }
-        return out.toString();
+        return new Formatter(this).format();
     }
 }
