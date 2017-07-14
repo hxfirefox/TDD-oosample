@@ -1,16 +1,20 @@
 public enum LengthUnit {
-    BASE(1),
-    INCH(BASE.getRateOfBase()),
-    FEET(12 * INCH.getRateOfBase()),
-    YARD(3 * FEET.getRateOfBase()),
-    MILE(1760 * YARD.getRateOfBase());
+    BASE(1, "Base"),
+    INCH(BASE.getRateOfBase(), "Inch"),
+    FEET(12 * INCH.getRateOfBase(), "Feet"),
+    YARD(3 * FEET.getRateOfBase(), "Yard"),
+    MILE(1760 * YARD.getRateOfBase(), "Mile");
     private int value;
+    private String str;
 
     public int getRateOfBase() {
         return value;
     }
 
-    LengthUnit(int value) {
+    public String toString() {return str;}
+
+    LengthUnit(int value, String str) {
         this.value = value;
+        this.str = str;
     }
 }
