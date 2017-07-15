@@ -1,9 +1,10 @@
 package github.hxfirefox.length;
 
-import github.hxfirefox.length.Length;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static github.hxfirefox.length.Length.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class LengthTest {
     @Test
@@ -13,10 +14,10 @@ public class LengthTest {
         // when
 
         // then
-        assertEquals(Length.mile(3), Length.mile(3));
-        assertEquals(Length.yard(3), Length.yard(3));
-        assertEquals(Length.feet(3), Length.feet(3));
-        assertEquals(Length.inch(3), Length.inch(3));
+        assertEquals(mile(3), mile(3));
+        assertEquals(yard(3), yard(3));
+        assertEquals(feet(3), feet(3));
+        assertEquals(inch(3), inch(3));
     }
 
     @Test
@@ -26,10 +27,10 @@ public class LengthTest {
         // when
 
         // then
-        assertEquals(Length.yard(1760), Length.mile(1));
-        assertNotEquals(Length.yard(1761), Length.mile(1));
-        assertEquals(Length.yard(1), Length.feet(3));
-        assertEquals(Length.feet(1), Length.inch(12));
+        assertEquals(yard(1760), mile(1));
+        assertNotEquals(yard(1761), mile(1));
+        assertEquals(yard(1), feet(3));
+        assertEquals(feet(1), inch(12));
     }
 
     @Test
@@ -39,10 +40,10 @@ public class LengthTest {
         // when
 
         // then
-        assertEquals(Length.mile(5), Length.mile(1).add(Length.mile(4)));
-        assertEquals(Length.yard(5), Length.yard(1).add(Length.yard(4)));
-        assertEquals(Length.feet(5), Length.feet(1).add(Length.feet(4)));
-        assertEquals(Length.inch(5), Length.inch(1).add(Length.inch(4)));
+        assertEquals(mile(5), mile(1).add(mile(4)));
+        assertEquals(yard(5), yard(1).add(yard(4)));
+        assertEquals(feet(5), feet(1).add(feet(4)));
+        assertEquals(inch(5), inch(1).add(inch(4)));
     }
 
     @Test
@@ -52,7 +53,7 @@ public class LengthTest {
         // when
 
         // then
-        assertEquals(Length.yard(1762), Length.mile(1).add(Length.yard(2)));
-        assertEquals(Length.inch(15), Length.feet(1).add(Length.inch(3)));
+        assertEquals(yard(1762), mile(1).add(yard(2)));
+        assertEquals(inch(15), feet(1).add(inch(3)));
     }
 }

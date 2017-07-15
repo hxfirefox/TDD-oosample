@@ -1,21 +1,17 @@
 package github.hxfirefox.format;
 
-import github.hxfirefox.format.Formatter;
-import github.hxfirefox.format.GradientFormatter;
-import github.hxfirefox.length.Length;
-import org.junit.Before;
 import org.junit.Test;
 
-import static github.hxfirefox.length.Length.inch;
-import static github.hxfirefox.length.Length.mile;
-import static org.junit.Assert.*;
+import static github.hxfirefox.length.Length.*;
+import static org.junit.Assert.assertEquals;
 
-public class GradientFormatterTest {
-    private Formatter formatter;
-
-    @Before
-    public void setUp() throws Exception {
-        formatter = new GradientFormatter();
+public class FormatterTest {
+    @Test
+    public void should_print_length_by_inch_when_using_direct_format() throws Exception {
+        String format1 = Formatter.directFormatter().format(feet(2));
+        String format2 = Formatter.directFormatter().format(yard(2));
+        assertEquals("24 Inch", format1);
+        assertEquals("72 Inch", format2);
     }
 
     @Test
@@ -23,6 +19,7 @@ public class GradientFormatterTest {
         // given
 
         // when
+        Formatter formatter = Formatter.gradientFormatter();
         // then
         assertEquals("0 Inch", formatter.format(inch(0)));
         assertEquals("0 Inch", formatter.format(mile(0)));
@@ -34,7 +31,7 @@ public class GradientFormatterTest {
         // given
 
         // when
-
+        Formatter formatter = Formatter.gradientFormatter();
         // then
         assertEquals("1 Feet 2 Inch", formatter.format(inch(14)));
     }
@@ -44,7 +41,7 @@ public class GradientFormatterTest {
         // given
 
         // when
-
+        Formatter formatter = Formatter.gradientFormatter();
         // then
         assertEquals("2 Feet", formatter.format(inch(24)));
     }
@@ -54,7 +51,7 @@ public class GradientFormatterTest {
         // given
 
         // when
-
+        Formatter formatter = Formatter.gradientFormatter();
         // then
         assertEquals("1 Yard 3 Inch", formatter.format(inch(39)));
     }
@@ -64,8 +61,8 @@ public class GradientFormatterTest {
         // given
 
         // when
-
+        Formatter formatter = Formatter.gradientFormatter();
         // then
-        assertEquals("1 Mile 2 Yard", formatter.format(Length.yard(1762)));
+        assertEquals("1 Mile 2 Yard", formatter.format(yard(1762)));
     }
 }

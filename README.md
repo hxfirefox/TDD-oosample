@@ -84,3 +84,6 @@
  Length(2, FEET) => 24 INCH
  Length(2, YARD) => 72 INCH
 ```
+
+### 需求描述9
+当输出一个Length对象时,用户可以在两种输出格式中自由选择任何一种
