@@ -2,6 +2,7 @@ public class Length {
     private final int amount;
 
     private final LengthUnit unit;
+    private Formatter formatter;
 
     private Length(int amount, LengthUnit unit) {
         this.amount = amount;
@@ -47,8 +48,17 @@ public class Length {
         return amount * unit.getRateOfBase();
     }
 
+    public LengthUnit getUnit() {
+        return unit;
+    }
+
+    public Length setFormatter(Formatter formatter) {
+        this.formatter = formatter;
+        return this;
+    }
+
     @Override
     public String toString() {
-        return new Formatter(this).format();
+        return formatter.format(this);
     }
 }

@@ -73,3 +73,14 @@
    Length(39, INCH)显示1 Yard 3 Inch
    Length(1762, YARD)显示1 Mile 2 Yard
    ```
+
+### 需求描述8
+增加一种新的 Length对象输出格式
+
+- 以Inch为单位输出任何Length对象
+- 数量和单位之间以一个空格分隔 例如:
+
+```
+ Length(2, FEET) => 24 INCH
+ Length(2, YARD) => 72 INCH
+```
