@@ -1,3 +1,7 @@
+package github.hxfirefox.length;
+
+import github.hxfirefox.format.Formatter;
+
 public class Length {
     private final int amount;
 

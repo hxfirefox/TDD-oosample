@@ -1,3 +1,6 @@
+package github.hxfirefox.format;
+
+import github.hxfirefox.length.Length;
 import org.junit.Before;
 import org.junit.Test;
 

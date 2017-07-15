@@ -1,6 +1,13 @@
+package github.hxfirefox.format;
+
+import github.hxfirefox.format.Formatter;
+import github.hxfirefox.format.GradientFormatter;
+import github.hxfirefox.length.Length;
 import org.junit.Before;
 import org.junit.Test;
 
+import static github.hxfirefox.length.Length.inch;
+import static github.hxfirefox.length.Length.mile;
 import static org.junit.Assert.*;
 
 public class GradientFormatterTest {
@@ -17,9 +24,9 @@ public class GradientFormatterTest {
 
         // when
         // then
-        assertEquals("0 Inch", formatter.format(Length.inch(0)));
-        assertEquals("0 Inch", formatter.format(Length.mile(0)));
-        assertEquals("1 Inch", formatter.format(Length.inch(1)));
+        assertEquals("0 Inch", formatter.format(inch(0)));
+        assertEquals("0 Inch", formatter.format(mile(0)));
+        assertEquals("1 Inch", formatter.format(inch(1)));
     }
 
     @Test
@@ -29,7 +36,7 @@ public class GradientFormatterTest {
         // when
 
         // then
-        assertEquals("1 Feet 2 Inch", formatter.format(Length.inch(14)));
+        assertEquals("1 Feet 2 Inch", formatter.format(inch(14)));
     }
 
     @Test
@@ -39,7 +46,7 @@ public class GradientFormatterTest {
         // when
 
         // then
-        assertEquals("2 Feet", formatter.format(Length.inch(24)));
+        assertEquals("2 Feet", formatter.format(inch(24)));
     }
 
     @Test
@@ -49,7 +56,7 @@ public class GradientFormatterTest {
         // when
 
         // then
-        assertEquals("1 Yard 3 Inch", formatter.format(Length.inch(39)));
+        assertEquals("1 Yard 3 Inch", formatter.format(inch(39)));
     }
 
     @Test

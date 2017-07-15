@@ -1,3 +1,5 @@
+package github.hxfirefox.length;
+
 public enum LengthUnit {
     BASE(1, "Base"),
     INCH(BASE.getRateOfBase(), "Inch"),

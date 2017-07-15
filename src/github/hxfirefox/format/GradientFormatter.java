@@ -1,5 +1,10 @@
-public class GradientFormatter implements Formatter {
+package github.hxfirefox.format;
 
+import github.hxfirefox.length.Length;
+import github.hxfirefox.length.LengthUnit;
+
+public class GradientFormatter implements Formatter {
+    @Override
     public String format(Length length) {
         boolean startFlag = false;
         StringBuilder out = new StringBuilder();

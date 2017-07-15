@@ -1,3 +1,6 @@
+package github.hxfirefox.length;
+
+import github.hxfirefox.length.Length;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
